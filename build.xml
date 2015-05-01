@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- WARNING: Eclipse auto-generated file.
               Any modifications will be overwritten.
@@ -14,6 +13,9 @@
   	<property name="report.pmd.dir" location="${report.dir}/pmd"/>
     <property name="src.dir" location="${basedir}/src" />
   	<property name="bin.dir" location="${basedir}/bin" />
+  	<!--<property name="checkstyle.home.dir" value="C:\SATool\checkstyle-6.5"/>
+    <property name="report.checkstyle.dir" location="${report.dir}/checkstyle" />-->
+  	
               	
     <path id="run.classpath">
     	<pathelement path="${bin.dir}"/>
@@ -33,6 +35,7 @@
     <target name="clean" description="Delete all result to start with a clean build.">
     	<delete dir="report.pmd.dir"/>
         <delete dir="bin"/>
+    	<!--<delete dir="{report.checkstyle.dir}"/>-->
     </target>
               	
     <target depends="clean" name="cleanall"/>
@@ -84,105 +87,7 @@
       	    </pmd>
       	</target>
               	
+      
+              	
       	<target name="run" depends="clean, report.pmd" description="Run the build" />
 </project>
-=======
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Test_CI">
-              	
-              	<!--- PMD추기 버전-->
-    <property environment="env"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.8"/>
-    <property name="source" value="1.8"/>
-  	<property name="pmd.home.dir" value="C:/SATool/pmd-bin-5.3.1"/>
-  	<property name="pmd.home" value="C:/SATool/pmd-bin-5.3.1"/>
-              	
-  	<property name="lib.dir" location="${basedir}/lib" />
-  	<property name="src.dir" location="${basedir}/src" />
-  	<property name="bin.dir" location="${basedir}/bin" />
-  	<property name="htm.dir" location="${basedir}/html" />
-              	
-  	<property name="report.dir" location="${basedir}}/report"/>
-  	<property name="report.pmd.dir" location="{report.dir}/pmd" />
-              	
-    <path id="run.classpath">
-        <pathelement path="${bin.dir}" />
-    </path>           	
-
-  	
-    <path id="pmd.calsspath">
-    	<pathelement location="${build}"/>
-		<fileset dir="${pmd.home}/lib">
-	   		<include name="*.jar" />
-		</fileset>
-	</path>
-  	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"
-              	classpathref="pmd.calsspath"/>
-              	
-  	 <target name="report.pmd">
-  	        <mkdir dir="${report.pmd.dir}" />
-  	        <pmd rulesetfiles="${pmd.home.dir}/rulesets/basicr.xml">
- 	            <formatter type="xml" toFile="${report.pmd.dir}/pmd_report.xml" />
-  	            <fileset dir="${src.dir}">
-  	                <include name="**/*.java" />
-  	            </fileset>
-  	        </pmd>
-  	 	</target>
-
-    <path id="Test_CI.classpath">
-        <pathelement location="bin"/>
-    </path>
-    <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-  
-    <target name="clean">
-        <delete dir="bin"/>
-    </target>
-              	
-  	<target name="run"
-        description="Run the build"
-        depends="clean,report.pmd">
-	</target>
-  	
-    <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects"/>
-    <target depends="init" name="build-project">
-        <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="Test_CI.classpath"/>
-        </javac>
-    </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
-        <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </copy>
-        <unzip dest="${ant.library.dir}">
-            <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </unzip>
-    </target>
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
-    </target>
-    <target name="main">
-        <java classname="TPackage.main" failonerror="true" fork="yes">
-            <classpath refid="Test_CI.classpath"/>
-        </java>
-    </target>
-</project>
->>>>>>> 134429691254cb790e8898b7ff11786e605666a9
