@@ -1,21 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Test_CI">
-    <property environment="env"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.8"/>
-    <property name="source" value="1.8"/>
-  	<property name="pmd.home" value="C:\SATool\pmd-bin-5.3.1" />
-  	<property name="report.dir" location="${basedir}/report" />
-  	<property name="report.pmd.dir" location="${report.dir}/pmd"/>
-    <property name="src.dir" location="${basedir}/src" />
-  	<property name="bin.dir" location="${basedir}/bin" />
-  	<!--<property name="checkstyle.home.dir" value="C:\SATool\checkstyle-6.5"/>
-    <property name="report.checkstyle.dir" location="${report.dir}/checkstyle" />-->
-  	
+
               	
     <path id="run.classpath">
     	<pathelement path="${bin.dir}"/>
