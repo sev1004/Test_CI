@@ -8,6 +8,7 @@ public class main {
 		System.out.println("Hellow Testing for CI server!!");
 		System.out.println("Thank you!");
 		System.out.println("Thank you!!!!");
+		System.out.println("123");
 	}
 
 }
