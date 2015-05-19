@@ -8,39 +8,45 @@ import model.Word;
 
 public class Dictionary_Controller {
 
-    public Word word;
-    public Dictionary dic;
-    public Database db;
+    private Word word;
+    private Dictionary dic;
+    private Database db;
     
     public Dictionary_Controller() {
+    	word = new Word();
+    	dic = new Dictionary();
+    	db = new Database();
+    }
+    
+    public Word getWord(){
+    	return word;
+    }
+    public Dictionary getDictionary(){
+    	return dic;
+    }
+    public void searchbyInitial(char alphabet) {
+        word = db.selectRandomWordbyAlphabet(alphabet);
     }
 
-    public void searchbyInitial(char initial) {
-        // TODO implement here
+    public void searchbyFullWord(String userTypedWord) {
+       word = db.selectWordbyText(userTypedWord);
     }
 
-    public void searchbyFullWord(String wordname) {
-        // TODO implement here
+    public void search(String text) {
+        if(text.length() == 1){
+        	char alphabet = text.charAt(0);
+        	this.searchbyInitial(alphabet);
+        } else if(text.length() > 1){
+        	String userTypedWord = text;
+        	this.searchbyFullWord(userTypedWord);
+        }
     }
-
-    public void setDictionaryStatus() {
-        // TODO implement here
-    }
-
-    public void getDictionaryStatus() {
-        // TODO implement here
-    }
-
-    public void search() {
-        // TODO implement here
-    }
-
     public void dictionaryOpen() {
-        // TODO implement here
+    	db.initializeDictionary(dic);
     }
 
     public void init() {
-        // TODO implement here
+    	dic.getWordArr().clear();
     }
 
 }

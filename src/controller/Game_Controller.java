@@ -15,56 +15,89 @@ public class Game_Controller {
     private String wordBuffer;
     private Picture vKeyboard;
     private Database db;
-    private int wordIndex;//*//
-
-
-    public Game_Controller() {
+    private int wordIndex;
+    
+	public Game_Controller() {
+		db = new Database();
+    	word = new Word();
+    	alphabet = new Alphabet();
+    	wordBuffer ="";
+    	vKeyboard = new Picture();
     	wordIndex=0;
     }
+
+    public void gameStart() {
+        selectWord();
+        word.setAlphabetArr();
+        checkKeyboardImage(word.getAlphabetArr().elementAt(0).get_Alphabet());
+    }
     public void selectWord() {
-    	int randNum = (int)Math.random()%120+1;
+    	double randomvalue = Math.random();
+    	int randNum = (int)(randomvalue*26)+1;
+    	System.out.println(randNum);
         word = db.selectGameWord(randNum);
-        
-        word.setXPos(120);
-        word.setYPos(130);
+        wordIndex = 0;
+    }
+    public void pressAlphabet(char c) {
+        checkAlphabet(c);
     }
     public void checkAlphabet(char c) {
         if(word.getName().charAt(wordIndex)==c)
         {
+        	System.out.println(word.getName().charAt(wordIndex));
         	word.getAlphabetArr().elementAt(wordIndex).setCorrect(true);
-        	checkWord();	
+        	if(wordIndex<word.getLength()-1)
+        		db.selectKeyboardImage(vKeyboard, word.getName().charAt(wordIndex+1));
+        	checkWord();
         }
     }
-    public void updateDictionary() {
-        // TODO implement here
-    }
-    public void gameStart() {
-        selectWord();
-        word.setAlphabetArr();
-        checkKeyboardImage();
-    }
     public void checkWord() {
-        if(wordIndex!=word.getLength())
+        if(wordIndex != (word.getLength()-1))
         {
         	wordIndex++;
         }
         else
         {
-        	db.updateWord(word);        	
+        	wordIndex++;
+        	word.setCorrect(true);
+        	db.updateWord(word);
         }
     }
-    public void pressAlphabet(char c) {
-        checkAlphabet(c);
-    }
-    public void checkKeyboardImage() {
-    	if(vKeyboard.getImageURL()=="")
-    		db.selectKeyboardImage(vKeyboard);
-    	
-    	vKeyboard.setXPos(100);
-    	vKeyboard.setYPos(200);
+    public void checkKeyboardImage(char c) {
+    	db.selectKeyboardImage(vKeyboard,c);
     }
     public void init() {
-        // TODO implement here
+        
     }
+    public Word getWord() {
+		return word;
+	}
+	public void setWord(Word word) {
+		this.word = word;
+	}
+	public Alphabet getAlphabet() {
+		return alphabet;
+	}
+	public void setAlphabet(Alphabet alphabet) {
+		this.alphabet = alphabet;
+	}
+	public String getWordBuffer() {
+		return wordBuffer;
+	}
+	public void setWordBuffer(String wordBuffer) {
+		this.wordBuffer = wordBuffer;
+	}
+	public Picture getvKeyboard() {
+		return vKeyboard;
+	}
+	public void setvKeyboard(Picture vKeyboard) {
+		this.vKeyboard = vKeyboard;
+	}
+	public int getWordIndex() {
+		return wordIndex;
+	}
+	public void setWordIndex(int wordIndex) {
+		this.wordIndex = wordIndex;
+	}
 
 }

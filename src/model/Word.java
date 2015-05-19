@@ -5,18 +5,21 @@ import java.util.*;
 
 public class Word extends Contents{
 
-    public String name;
-    public Vector<Alphabet> arr;
-    public int length;
-    public int type;
-    public Boolean correct;
-    public String url2;
-    public Database db;
+    private String name;
+    private Vector<Alphabet> arr;
+    private int length;
+    private int type;
+    private Boolean correct;
+    private Database db;
     
     public Word() {
-    	
+    	name = "";
+    	arr = new Vector<Alphabet>();
+    	length = 0;
+    	type = 0;
+    	correct = false;
+    	db = new Database();
     }
-
 
     public String getName() {
         return this.name;
@@ -51,18 +54,18 @@ public class Word extends Contents{
     }
 
     public Vector<Alphabet> getAlphabetArr() {
-    	return null;
-    }
-
-    public void playSound() {
-    }
-
-    public void setImageURL2(String url2) {
-    	this.url2=url2;
+    	return this.arr;
     }
 
     public void setAlphabetArr() {
-    	this.arr=arr;
+    	for(int i=0; i<this.name.length(); i++)
+    	{
+    		this.arr.add(db.selectGameAlphabet(this.name.charAt(i)));
+    	}
+    	for(int i=0; i<this.name.length(); i++)
+    	{
+    		System.out.println(this.arr.elementAt(i).get_Alphabet());
+    	}
     }
 
     public void appendAlphabet(Alphabet alphabet) {
@@ -72,9 +75,4 @@ public class Word extends Contents{
     public Boolean getCorrect() {
     	return this.correct;
     }
-    
-    public void setCategorizedWordPos() {
-    	
-    }
-
 }

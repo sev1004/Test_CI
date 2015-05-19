@@ -8,13 +8,9 @@ public class Picture extends Contents{
     }
 
     public void setDefaultImageURL() {
-        // TODO implement here
-    	this.setImageURL("");
+    	this.setImageURL("image/reward/default.jpg");
     }
-
     public void setRewardImageURL(String url) {
-        // TODO implement here
     	this.setImageURL(url);
     }
-
 }
