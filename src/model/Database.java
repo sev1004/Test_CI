@@ -22,7 +22,6 @@ public class Database {
 	public boolean dbConnect(){
 		try{
 			conn = DriverManager.getConnection("jdbc:sqlite:resource/db.sqlite");
-			System.out.println("dbConnect");
 		}catch(Exception e){
 			System.err.println(e.getClass().getName()+": "+e.getMessage());
 			return false;
@@ -35,7 +34,7 @@ public class Database {
     }
 
     public Word selectGameWord(int randomword) {
-    	Word word = new Word();//commit test 4
+    	Word word = new Word();
         String sql = "select * from Word where key = "+randomword+"";
         try {
 			stmt = conn.createStatement();        
@@ -66,7 +65,7 @@ public class Database {
         	rs = stmt.executeQuery(sql);
         	if(rs.next())
         	{
-        		talphabet.set_Alphabet(rs.getString("name").charAt(0));
+        		talphabet.setAlphabet(rs.getString("name").charAt(0));
         		talphabet.setImageURL(rs.getString("imageURL"));
         		talphabet.setSoundURL(rs.getString("soundURL"));
         	}
@@ -152,12 +151,12 @@ public class Database {
         {
         	System.out.println(e.getMessage());
         }
-        
     }
 
     public void updateRewardToDefault(Picture p) {
-        p.setImageURL("image/reward/default.jpg");
-        String sql = "update Picture set URL ='"+p.getImageURL()+"'where name ='reward'";
+    	String defaultImg = "image/reward/default.jpg";
+        p.setImageURL(defaultImg);
+        String sql = "update Picture set URL ='"+defaultImg+"'where name ='reward'";
         try{
         	stmt = conn.createStatement();
         	stmt.executeUpdate(sql);
@@ -166,7 +165,6 @@ public class Database {
         {
         	System.out.println(e.getMessage());
         }
-        
     }
     
     public void selectKeyboardImage(Picture vKeyboard, char c)
@@ -185,7 +183,6 @@ public class Database {
     	{
     		System.out.println(e.getMessage());
     	}
-    	
     }
 	public Word selectWordbyText(String userTypedWord) {
 		Word temp = new Word();
@@ -248,7 +245,5 @@ public class Database {
 		{
 			e.printStackTrace();
 		}
-				
 	}
-
 }

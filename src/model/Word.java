@@ -20,7 +20,7 @@ public class Word extends Contents{
     	correct = false;
     	db = new Database();
     }
-
+    
     public String getName() {
         return this.name;
     }
@@ -60,11 +60,7 @@ public class Word extends Contents{
     public void setAlphabetArr() {
     	for(int i=0; i<this.name.length(); i++)
     	{
-    		this.arr.add(db.selectGameAlphabet(this.name.charAt(i)));
-    	}
-    	for(int i=0; i<this.name.length(); i++)
-    	{
-    		System.out.println(this.arr.elementAt(i).get_Alphabet());
+    		this.appendAlphabet(db.selectGameAlphabet(this.name.charAt(i)));
     	}
     }
 

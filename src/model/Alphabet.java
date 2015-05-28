@@ -10,10 +10,10 @@ public class Alphabet extends Contents {
     	correct = false;
     }
 
-    public char get_Alphabet() {
+    public char getAlphabet() {
         return alphabet;
     }
-    public void set_Alphabet(char alphabet) {
+    public void setAlphabet(char alphabet) {
         this.alphabet = alphabet;
     }
     
