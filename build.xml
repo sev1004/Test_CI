@@ -133,5 +133,5 @@
               	          	<target name="report.findbugs" description="gennerate a report on error analysis">
               	          	<xslt out="${report.findbugs.dir}/findbugs-default.html" style="${findbugs.home.dir}/src/xsl/fancy.xsl" in="${report.findbugs.dir}/findbugs.xml"/>
               	          	</target>	              	
-              		      	<target name="run" depends="clean, build, report.pmd,report.checkstyle,report.findbugs,findbugs" description="Run the build" />
+              		      	<target name="run" depends="clean, build, report.pmd,report.checkstyle,findbugs,report.findbugs" description="Run the build" />
 </project>
