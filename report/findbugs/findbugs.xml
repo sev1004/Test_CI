@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1432884398496" analysisTimestamp="1432884398506" release="">
+  <Project projectName="">
+    <Jar>C:\DEV\Test_CI\bin</Jar>
+    <SrcDir>C:\DEV\Test_CI\src</SrcDir>
+  </Project>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE">
+    <Class classname="controller.MainController">
+      <SourceLine classname="controller.MainController" start="14" end="51" sourcefile="MainController.java" sourcepath="controller/MainController.java"/>
+    </Class>
+    <Method classname="controller.MainController" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="controller.MainController" start="50" end="51" startBytecode="0" endBytecode="4" sourcefile="MainController.java" sourcepath="controller/MainController.java"/>
+    </Method>
+    <LocalVariable name="mf" register="1" pc="8" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="controller.MainController" start="50" end="50" startBytecode="7" endBytecode="7" sourcefile="MainController.java" sourcepath="controller/MainController.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="mf"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE">
+    <Class classname="controller.PictureController">
+      <SourceLine classname="controller.PictureController" start="13" end="32" sourcefile="PictureController.java" sourcepath="controller/PictureController.java"/>
+    </Class>
+    <Field classname="controller.PictureController" name="url" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="controller.PictureController" sourcefile="PictureController.java" sourcepath="controller/PictureController.java"/>
+    </Field>
+    <SourceLine classname="controller.PictureController" start="14" end="14" startBytecode="7" endBytecode="7" sourcefile="PictureController.java" sourcepath="controller/PictureController.java"/>
+  </BugInstance>
+  <BugInstance type="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE" priority="1" rank="10" abbrev="SQL" category="SECURITY">
+    <Class classname="model.Database">
+      <SourceLine classname="model.Database" start="18" end="248" sourcefile="Database.java" sourcepath="model/Database.java"/>
+    </Class>
+    <Method classname="model.Database" name="selectWordbyText" signature="(Ljava/lang/String;)Lmodel/Word;" isStatic="false">
+      <SourceLine classname="model.Database" start="188" end="211" startBytecode="0" endBytecode="68" sourcefile="Database.java" sourcepath="model/Database.java"/>
+    </Method>
+    <SourceLine classname="model.Database" start="192" end="192" startBytecode="52" endBytecode="52" sourcefile="Database.java" sourcepath="model/Database.java"/>
+  </BugInstance>
+  <BugInstance type="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE" priority="1" rank="10" abbrev="SQL" category="SECURITY">
+    <Class classname="model.Database">
+      <SourceLine classname="model.Database" start="18" end="248" sourcefile="Database.java" sourcepath="model/Database.java"/>
+    </Class>
+    <Method classname="model.Database" name="updateRewardImage" signature="(Lmodel/Picture;)V" isStatic="false">
+      <SourceLine classname="model.Database" start="145" end="154" startBytecode="0" endBytecode="31" sourcefile="Database.java" sourcepath="model/Database.java"/>
+    </Method>
+    <SourceLine classname="model.Database" start="148" end="148" startBytecode="46" endBytecode="46" sourcefile="Database.java" sourcepath="model/Database.java"/>
+  </BugInstance>
+  <BugInstance type="SQL_NONCONSTANT_STRING_PASSED_TO_EXECUTE" priority="1" rank="10" abbrev="SQL" category="SECURITY">
+    <Class classname="model.Database">
+      <SourceLine classname="model.Database" start="18" end="248" sourcefile="Database.java" sourcepath="model/Database.java"/>
+    </Class>
+    <Method classname="model.Database" name="updateWord" signature="(Lmodel/Word;)V" isStatic="false">
+      <SourceLine classname="model.Database" start="82" end="92" startBytecode="0" endBytecode="31" sourcefile="Database.java" sourcepath="model/Database.java"/>
+    </Method>
+    <SourceLine classname="model.Database" start="85" end="85" startBytecode="46" endBytecode="46" sourcefile="Database.java" sourcepath="model/Database.java"/>
+  </BugInstance>
+  <BugInstance type="DM_NEXTINT_VIA_NEXTDOUBLE" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="view.AlphabetBoard">
+      <SourceLine classname="view.AlphabetBoard" start="12" end="123" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Class>
+    <Method classname="view.AlphabetBoard" name="loadImage" signature="(I)V" isStatic="false">
+      <SourceLine classname="view.AlphabetBoard" start="34" end="54" startBytecode="0" endBytecode="371" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Method>
+    <SourceLine classname="view.AlphabetBoard" start="34" end="34" startBytecode="7" endBytecode="7" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE">
+    <Class classname="view.AlphabetBoard">
+      <SourceLine classname="view.AlphabetBoard" start="12" end="123" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Class>
+    <Method classname="view.AlphabetBoard" name="loadImage" signature="(I)V" isStatic="false">
+      <SourceLine classname="view.AlphabetBoard" start="34" end="54" startBytecode="0" endBytecode="371" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Method>
+    <SourceLine classname="view.AlphabetBoard" start="43" end="50" startBytecode="117" endBytecode="210" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE">
+    <Class classname="view.AlphabetBoard">
+      <SourceLine classname="view.AlphabetBoard" start="12" end="123" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Class>
+    <Field classname="view.AlphabetBoard" name="DELAY" signature="I" isStatic="false">
+      <SourceLine classname="view.AlphabetBoard" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Field>
+    <SourceLine classname="view.AlphabetBoard" start="12" end="12" startBytecode="6" endBytecode="6" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" rank="12" abbrev="UwF" category="CORRECTNESS">
+    <Class classname="view.AlphabetBoard">
+      <SourceLine classname="view.AlphabetBoard" start="12" end="123" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Class>
+    <Field classname="view.AlphabetBoard" name="offScreen" signature="Ljava/awt/Image;" isStatic="false">
+      <SourceLine classname="view.AlphabetBoard" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+    </Field>
+    <SourceLine classname="view.AlphabetBoard" start="62" end="62" startBytecode="36" endBytecode="36" sourcefile="AlphabetBoard.java" sourcepath="view/AlphabetBoard.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE">
+    <Class classname="view.Board">
+      <SourceLine classname="view.Board" start="32" end="196" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Class>
+    <Method classname="view.Board" name="setdemension" signature="()V" isStatic="false">
+      <SourceLine classname="view.Board" start="83" end="105" startBytecode="0" endBytecode="390" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Method>
+    <SourceLine classname="view.Board" start="87" end="102" startBytecode="63" endBytecode="268" sourcefile="Board.java" sourcepath="view/Board.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE">
+    <Class classname="view.Board">
+      <SourceLine classname="view.Board" start="32" end="196" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Class>
+    <Field classname="view.Board" name="B_HEIGHT" signature="I" isStatic="false">
+      <SourceLine classname="view.Board" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Field>
+    <SourceLine classname="view.Board" start="33" end="33" startBytecode="15" endBytecode="15" sourcefile="Board.java" sourcepath="view/Board.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE">
+    <Class classname="view.Board">
+      <SourceLine classname="view.Board" start="32" end="196" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Class>
+    <Field classname="view.Board" name="B_WIDTH" signature="I" isStatic="false">
+      <SourceLine classname="view.Board" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Field>
+    <SourceLine classname="view.Board" start="32" end="32" startBytecode="8" endBytecode="8" sourcefile="Board.java" sourcepath="view/Board.java"/>
+  </BugInstance>
+  <BugInstance type="SS_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SS" category="PERFORMANCE">
+    <Class classname="view.Board">
+      <SourceLine classname="view.Board" start="32" end="196" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Class>
+    <Field classname="view.Board" name="DELAY" signature="I" isStatic="false">
+      <SourceLine classname="view.Board" sourcefile="Board.java" sourcepath="view/Board.java"/>
+    </Field>
+    <SourceLine classname="view.Board" start="34" end="34" startBytecode="21" endBytecode="21" sourcefile="Board.java" sourcepath="view/Board.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="view.DictionaryPanel">
+      <SourceLine classname="view.DictionaryPanel" start="22" end="322" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Class>
+    <Method classname="view.DictionaryPanel" name="getSearchString" signature="()Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="view.DictionaryPanel" start="68" end="77" startBytecode="0" endBytecode="174" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Method>
+    <SourceLine classname="view.DictionaryPanel" start="70" end="70" startBytecode="30" endBytecode="30" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE">
+    <Class classname="view.DictionaryPanel">
+      <SourceLine classname="view.DictionaryPanel" start="22" end="322" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Class>
+    <Method classname="view.DictionaryPanel" name="viewDictionary" signature="(Lcontroller/MainController;Ljavax/swing/JPanel;Lview/MainFrame;)V" isStatic="false">
+      <SourceLine classname="view.DictionaryPanel" start="121" end="322" startBytecode="0" endBytecode="2632" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Method>
+    <SourceLine classname="view.DictionaryPanel" start="242" end="285" startBytecode="922" endBytecode="1404" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="view.DictionaryPanel">
+      <SourceLine classname="view.DictionaryPanel" start="22" end="322" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Class>
+    <Field classname="view.DictionaryPanel" name="searchFlag" signature="Z" isStatic="false">
+      <SourceLine classname="view.DictionaryPanel" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Field>
+    <SourceLine classname="view.DictionaryPanel" start="22" end="22" startBytecode="3" endBytecode="3" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE">
+    <Class classname="view.DictionaryPanel$2">
+      <SourceLine classname="view.DictionaryPanel$2" start="192" end="216" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Class>
+    <Method classname="view.DictionaryPanel$2" name="keyTyped" signature="(Ljava/awt/event/KeyEvent;)V" isStatic="false">
+      <SourceLine classname="view.DictionaryPanel$2" start="196" end="216" startBytecode="0" endBytecode="62" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Method>
+    <LocalVariable name="a" register="2" pc="17" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="view.DictionaryPanel$2" start="197" end="197" startBytecode="16" endBytecode="16" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="a"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_VOID_CTOR" priority="2" rank="18" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="view.DictionaryPanel$2">
+      <SourceLine classname="view.DictionaryPanel$2" start="192" end="216" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Class>
+    <Method classname="view.DictionaryPanel$2" name="keyTyped" signature="(Ljava/awt/event/KeyEvent;)V" isStatic="false">
+      <SourceLine classname="view.DictionaryPanel$2" start="196" end="216" startBytecode="0" endBytecode="271" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+    </Method>
+    <SourceLine classname="view.DictionaryPanel$2" start="197" end="197" startBytecode="13" endBytecode="13" sourcefile="DictionaryPanel.java" sourcepath="view/DictionaryPanel.java"/>
+  </BugInstance>
+  <BugInstance type="IS2_INCONSISTENT_SYNC" priority="2" rank="17" abbrev="IS" category="MT_CORRECTNESS">
+    <Class classname="view.MainFrame">
+      <SourceLine classname="view.MainFrame" start="47" end="235" sourcefile="MainFrame.java" sourcepath="view/MainFrame.java"/>
+    </Class>
+    <Field classname="view.MainFrame" name="gamePanel" signature="Lview/GamePanel;" isStatic="false">
+      <SourceLine classname="view.MainFrame" sourcefile="MainFrame.java" sourcepath="view/MainFrame.java"/>
+    </Field>
+    <Int value="80" role="INT_SYNC_PERCENT"/>
+    <SourceLine classname="view.MainFrame" start="209" end="209" startBytecode="40" endBytecode="40" sourcefile="MainFrame.java" sourcepath="view/MainFrame.java" role="SOURCE_LINE_UNSYNC_ACCESS"/>
+    <SourceLine classname="view.MainFrame" start="153" end="153" startBytecode="10" endBytecode="10" sourcefile="MainFrame.java" sourcepath="view/MainFrame.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="view.MainFrame" start="173" end="173" startBytecode="159" endBytecode="159" sourcefile="MainFrame.java" sourcepath="view/MainFrame.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="view.MainFrame" start="191" end="191" startBytecode="270" endBytecode="270" sourcefile="MainFrame.java" sourcepath="view/MainFrame.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+    <SourceLine classname="view.MainFrame" start="194" end="194" startBytecode="303" endBytecode="303" sourcefile="MainFrame.java" sourcepath="view/MainFrame.java" role="SOURCE_LINE_SYNC_ACCESS"/>
+  </BugInstance>
+  <BugInstance type="UCF_USELESS_CONTROL_FLOW" priority="2" rank="17" abbrev="UCF" category="STYLE">
+    <Class classname="view.SoundPlayer">
+      <SourceLine classname="view.SoundPlayer" start="14" end="55" sourcefile="SoundPlayer.java" sourcepath="view/SoundPlayer.java"/>
+    </Class>
+    <Method classname="view.SoundPlayer" name="display" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="view.SoundPlayer" start="53" end="55" startBytecode="0" endBytecode="72" sourcefile="SoundPlayer.java" sourcepath="view/SoundPlayer.java"/>
+    </Method>
+    <SourceLine classname="view.SoundPlayer" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="SoundPlayer.java" sourcepath="view/SoundPlayer.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="5">
+    <MissingClass>javazoom.jlgui.basicplayer.BasicController</MissingClass>
+    <MissingClass>javazoom.jlgui.basicplayer.BasicPlayer</MissingClass>
+    <MissingClass>javazoom.jlgui.basicplayer.BasicPlayerEvent</MissingClass>
+    <MissingClass>javazoom.jlgui.basicplayer.BasicPlayerException</MissingClass>
+    <MissingClass>javazoom.jlgui.basicplayer.BasicPlayerListener</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Fri, 29 May 2015 16:26:38 +0900" total_classes="20" referenced_classes="352" total_bugs="20" total_size="1406" num_packages="3" java_version="1.8.0_45" vm_version="25.45-b02" cpu_seconds="14.57" clock_seconds="4.87" peak_mbytes="349.53" alloc_mbytes="1803.00" gc_seconds="0.13" priority_2="16" priority_1="4">
+    <PackageStats package="controller" total_bugs="2" total_types="4" total_size="165" priority_2="1" priority_1="1">
+      <ClassStats class="controller.DictionaryController" sourceFile="DictionaryController.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="controller.GameController" sourceFile="GameController.java" interface="false" size="72" bugs="0"/>
+      <ClassStats class="controller.MainController" sourceFile="MainController.java" interface="false" size="34" bugs="1" priority_1="1"/>
+      <ClassStats class="controller.PictureController" sourceFile="PictureController.java" interface="false" size="25" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="model" total_bugs="3" total_types="6" total_size="273" priority_1="3">
+      <ClassStats class="model.Alphabet" sourceFile="Alphabet.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="model.Contents" sourceFile="Contents.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="model.Database" sourceFile="Database.java" interface="false" size="171" bugs="3" priority_1="3"/>
+      <ClassStats class="model.Dictionary" sourceFile="Dictionary.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="model.Picture" sourceFile="Picture.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="model.Word" sourceFile="Word.java" interface="false" size="47" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="view" total_bugs="15" total_types="10" total_size="968" priority_2="15">
+      <ClassStats class="view.AlphabetBoard" sourceFile="AlphabetBoard.java" interface="false" size="83" bugs="4" priority_2="4"/>
+      <ClassStats class="view.Board" sourceFile="Board.java" interface="false" size="130" bugs="4" priority_2="4"/>
+      <ClassStats class="view.DictionaryPanel" sourceFile="DictionaryPanel.java" interface="false" size="200" bugs="3" priority_2="3"/>
+      <ClassStats class="view.DictionaryPanel$1" sourceFile="DictionaryPanel.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="view.DictionaryPanel$2" sourceFile="DictionaryPanel.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="view.GamePanel" sourceFile="GamePanel.java" interface="false" size="177" bugs="0"/>
+      <ClassStats class="view.GamePanel$1" sourceFile="GamePanel.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="view.MainFrame" sourceFile="MainFrame.java" interface="false" size="166" bugs="1" priority_2="1"/>
+      <ClassStats class="view.PicturePanel" sourceFile="PicturePanel.java" interface="false" size="123" bugs="0"/>
+      <ClassStats class="view.SoundPlayer" sourceFile="SoundPlayer.java" interface="false" size="34" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="478" invocations="1631" avgMicrosecondsPerInvocation="293" maxMicrosecondsPerInvocation="43796" standardDeviationMircosecondsPerInvocation="1395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="344" invocations="352" avgMicrosecondsPerInvocation="978" maxMicrosecondsPerInvocation="44190" standardDeviationMircosecondsPerInvocation="3476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="325" invocations="1635" avgMicrosecondsPerInvocation="199" maxMicrosecondsPerInvocation="3356" standardDeviationMircosecondsPerInvocation="153"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="255" invocations="352" avgMicrosecondsPerInvocation="724" maxMicrosecondsPerInvocation="18504" standardDeviationMircosecondsPerInvocation="1552"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="241" invocations="20" avgMicrosecondsPerInvocation="12083" maxMicrosecondsPerInvocation="172880" standardDeviationMircosecondsPerInvocation="39109"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="178" invocations="161" avgMicrosecondsPerInvocation="1107" maxMicrosecondsPerInvocation="40215" standardDeviationMircosecondsPerInvocation="4221"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="159" invocations="877" avgMicrosecondsPerInvocation="182" maxMicrosecondsPerInvocation="2690" standardDeviationMircosecondsPerInvocation="266"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="142" invocations="148" avgMicrosecondsPerInvocation="965" maxMicrosecondsPerInvocation="32669" standardDeviationMircosecondsPerInvocation="4015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="124" invocations="148" avgMicrosecondsPerInvocation="839" maxMicrosecondsPerInvocation="29912" standardDeviationMircosecondsPerInvocation="3053"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="95" invocations="158" avgMicrosecondsPerInvocation="607" maxMicrosecondsPerInvocation="18713" standardDeviationMircosecondsPerInvocation="1863"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="95" invocations="352" avgMicrosecondsPerInvocation="270" maxMicrosecondsPerInvocation="17320" standardDeviationMircosecondsPerInvocation="1067"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="93" invocations="429" avgMicrosecondsPerInvocation="217" maxMicrosecondsPerInvocation="12680" standardDeviationMircosecondsPerInvocation="733"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="92" invocations="352" avgMicrosecondsPerInvocation="263" maxMicrosecondsPerInvocation="29453" standardDeviationMircosecondsPerInvocation="1681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="89" invocations="148" avgMicrosecondsPerInvocation="606" maxMicrosecondsPerInvocation="21796" standardDeviationMircosecondsPerInvocation="2245"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="87" invocations="148" avgMicrosecondsPerInvocation="593" maxMicrosecondsPerInvocation="29178" standardDeviationMircosecondsPerInvocation="2865"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="84" invocations="101" avgMicrosecondsPerInvocation="839" maxMicrosecondsPerInvocation="35204" standardDeviationMircosecondsPerInvocation="3598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="75" invocations="20" avgMicrosecondsPerInvocation="3759" maxMicrosecondsPerInvocation="63650" standardDeviationMircosecondsPerInvocation="13866"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="73" invocations="352" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="9832" standardDeviationMircosecondsPerInvocation="612"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="65" invocations="1579" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="2431" standardDeviationMircosecondsPerInvocation="131"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="63" invocations="148" avgMicrosecondsPerInvocation="426" maxMicrosecondsPerInvocation="30489" standardDeviationMircosecondsPerInvocation="2586"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="59" invocations="148" avgMicrosecondsPerInvocation="400" maxMicrosecondsPerInvocation="41509" standardDeviationMircosecondsPerInvocation="3407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="54" invocations="352" avgMicrosecondsPerInvocation="153" maxMicrosecondsPerInvocation="3132" standardDeviationMircosecondsPerInvocation="314"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDeadLocalStores" totalMilliseconds="53" invocations="20" avgMicrosecondsPerInvocation="2660" maxMicrosecondsPerInvocation="32143" standardDeviationMircosecondsPerInvocation="7422"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="53" invocations="352" avgMicrosecondsPerInvocation="150" maxMicrosecondsPerInvocation="7344" standardDeviationMircosecondsPerInvocation="517"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -5,23 +5,33 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="Test_CI">
     <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
-  	<property name="pmd.home" location="C:\SATool\pmd-bin-5.3.1" />
-  	<property name="report.dir" location="${basedir}/report" />
-  	<property name="checkstyle.home.dir" location="C:\SATool\checkstyle-6.5"/>
-  	<property name="report.checkstyle.dir" location="${report.dir}/checkstyle"/>
-  	<property name="report.pmd.dir" location="${report.dir}/pmd"/>
-    <property name="src.dir" location="${basedir}/src" />
-  	<property name="bin.dir" location="${basedir}/bin" />
               	
-    <path id="run.classpath">
-    	<pathelement path="${bin.dir}"/>
-    </path>
+  	<property name="report.dir" location="${basedir}/report" />
+  	              	
+  	  	<property name="pmd.home" location="C:\SATool\pmd-bin-5.3.1" />
+  	  	<property name="report.pmd.dir" location="${basedir}/report/pmd"/>
+  	  	              	
+  	  	<property name="checkstyle.home.dir" location="C:\SATool\checkstyle-6.5"/>
+  	  	<property name="report.checkstyle.dir" location="${report.dir}/checkstyle"/>
+  	  	
+  	  	<property name="findbugs.home.dir" value="C:\SATool\findbugs-3.0.1"/>              	
+  	  	<property name="report.findbugs.dir" location="${report.dir}/findbugs"/>
+  	              	
+  	    <property name="src.dir" location="${basedir}/src" />
+  	  	<property name="bin.dir" location="${basedir}/bin" />
+  	              	  	
+              	              	              	
+              	    <path id="run.classpath">
+              	    	<pathelement path="${bin.dir}"/>
+              	    </path>
               	
     <path id="Test_CI.classpath">
         <pathelement location="bin"/>
+        <pathelement location="lib/basicplayer3.0.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -31,12 +41,12 @@
             </fileset>
         </copy>
     </target>
-    <target name="clean" description="Delete all result to start with a clean build.">
+    <target name="clean">
     	<delete dir="${report.pmd.dir}"/>
     	<delete dir="${report.checkstyle.dir}"/>
+    	<delete dir="${report.findbugs.dir}"/>
         <delete dir="bin"/>
     </target>
-              	
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects"/>
@@ -66,43 +76,62 @@
             <classpath refid="Test_CI.classpath"/>
         </java>
     </target>
-              	
-      	<!--checkstyle-->
-      	<target name="report.checkstyle" description="Generate a report of code convention violations.">
-              	<taskdef resource="checkstyletask.properties" classpath="${checkstyle.home.dir}/checkstyle-6.5-all.jar/"/>
-              	<!-- run verification of installation-->
-      			<available file="${checkstyle.home.dir}/checkstyle-6.5-all.jar" property="checkstyle.available"/>
-      			<fail unless="checkstyle.available" message="Error : dir error or all-jar not found. "/>
-      			<mkdir dir="${report.checkstyle.dir}"/>
-      		
-  				<!--run anaysis-->
-      			<checkstyle config="${checkstyle.home.dir}/config/checkstyle_checks.xml"
-      				failureProperty="checkstyle.failure" failOnViolation="false">
-      				<formatter type="xml" tofile="${report.checkstyle.dir}/checkstyle_report.xml" />
-      				<fileset dir="${src.dir}" includes="**/*.java"/>
-  				</checkstyle>
-      		</target>
-      		
-      				
-      		
-  		<!-- pmd -->
-      	<path id="pmd.classpath">
-      		<pathelement location="${build}"/>
-      		<fileset dir="${pmd.home}/lib">
-      		<include name="*.jar" />              
-      		</fileset>
-  		</path>
-              		         
-    	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath"/>
-		<target name="report.pmd">
-			<mkdir dir="${report.pmd.dir}"/>
-  	   	 	<pmd rulesetfiles="${pmd.home}/rulesets/basicr.xml">
-      	        <formatter type="xml" toFile="${report.pmd.dir}/pmd_report.xml"/>
-      	        <fileset dir="${src.dir}">
-      	            <include name="**/*.java"/>
-      	        </fileset>
-      	    </pmd>
-      	</target>
-              	
-      	<target name="run" depends="clean, report.pmd,report.checkstyle" description="Run the build" />
+    <target name="MainController">
+        <java classname="controller.MainController" failonerror="true" fork="yes">
+            <classpath refid="Test_CI.classpath"/>
+        </java>
+    </target>
+              	<!--checkstyle-->
+              		      	<target name="report.checkstyle" description="Generate a report of code convention violations.">
+              		              	<taskdef resource="checkstyletask.properties" classpath="${checkstyle.home.dir}/checkstyle-6.5-all.jar/"/>
+              		              	<!-- run verification of installation-->
+              		      			<available file="${checkstyle.home.dir}/checkstyle-6.5-all.jar" property="checkstyle.available"/>
+              		      			<fail unless="checkstyle.available" message="Error : dir error or all-jar not found. "/>
+              		      			<mkdir dir="${report.checkstyle.dir}"/>
+              		      		
+              		  				<!--run anaysis-->
+              		      			<checkstyle config="${checkstyle.home.dir}/config/checkstyle_checks.xml"
+              		      				failureProperty="checkstyle.failure" failOnViolation="false">
+              		      				<formatter type="xml" tofile="${report.checkstyle.dir}/checkstyle_report.xml" />
+              		      				<fileset dir="${src.dir}" includes="**/*.java"/>
+              		  				</checkstyle>
+              		      		</target>
+              		      		
+              		      					      		
+              		  		<!-- pmd -->
+              		      	<path id="pmd.classpath">
+              		      		<pathelement location="${build}"/>
+              		      		<fileset dir="${pmd.home}/lib">
+              		      		<include name="*.jar" />              
+              		      		</fileset>
+              		  		</path>
+              		              		         
+              		    	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath"/>
+              				<target name="report.pmd">
+              					<mkdir dir="${report.pmd.dir}"/>
+              		  	   	 	<pmd rulesetfiles="${pmd.home}/rulesets/basicr.xml">
+              		      	        <formatter type="xml" toFile="${report.pmd.dir}/pmd_report.xml"/>
+              		      	        <fileset dir="${src.dir}">
+              		      	            <include name="**/*.java"/>
+              		      	        </fileset>
+              		      	    </pmd>
+              		      	</target>
+              	              	
+              	          	<!--findbugs-->
+              	          	<target name="findbugs" description="Run code analysis over code to check for problem">
+              	          	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" classpath="${findbugs.home.dir}/lib/findbugs-ant.jar"/>
+
+              	          	<!--run findbugs-->
+
+              	          	<mkdir dir="${report.findbugs.dir}"/>
+              	          	<findbugs outputFile="${report.findbugs.dir}/findbugs.xml" output="xml" workhard="true" home="${findbugs.home.dir}">
+              	          	<sourcePath path="${src.dir}"/>
+              	          	<class location="${bin.dir}"/>
+              	          	</findbugs>
+              	          	</target>
+
+              	          	<target name="report.findbugs" description="gennerate a report on error analysis">
+              	          	<xslt out="${report.findbugs.dir}/findbugs-default.html" style="${findbugs.home.dir}/src/xsl/fancy.xsl" in="${report.findbugs.dir}/findbugs.xml"/>
+              	          	</target>	              	
+              		      	<target name="run" depends="clean, build, report.pmd,report.checkstyle,report.findbugs,findbugs" description="Run the build" />
 </project>

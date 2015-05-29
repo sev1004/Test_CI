@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.1" timestamp="2015-05-29T15:33:57.459">
+<file name="C:\DEV\Test_CI\src\controller\DictionaryController.java">
+<violation beginline="13" endline="13" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Naming" package="controller" class="DictionaryController" variable="db" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like db
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\controller\GameController.java">
+<violation beginline="16" endline="16" begincolumn="26" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="controller" class="GameController" variable="db" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like db
+</violation>
+<violation beginline="41" endline="41" begincolumn="40" endcolumn="40" rule="ShortVariable" ruleset="Naming" package="controller" class="GameController" method="pressAlphabet" variable="c" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like c
+</violation>
+<violation beginline="45" endline="45" begincolumn="40" endcolumn="40" rule="ShortVariable" ruleset="Naming" package="controller" class="GameController" method="checkAlphabet" variable="c" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like c
+</violation>
+<violation beginline="63" endline="63" begincolumn="45" endcolumn="45" rule="ShortVariable" ruleset="Naming" package="controller" class="GameController" method="checkKeyboardImage" variable="c" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like c
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\controller\MainController.java">
+<violation beginline="50" endline="50" begincolumn="27" endcolumn="28" rule="ShortVariable" ruleset="Naming" package="controller" class="MainController" method="main" variable="mf" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like mf
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\controller\PictureController.java">
+<violation beginline="11" endline="11" begincolumn="21" endcolumn="22" rule="ShortVariable" ruleset="Naming" package="controller" class="PictureController" variable="db" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like db
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\model\Alphabet.java">
+<violation beginline="5" endline="5" begincolumn="13" endcolumn="26" rule="AvoidFieldNameMatchingTypeName" ruleset="Naming" package="model" class="Alphabet" variable="alphabet" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#AvoidFieldNameMatchingTypeName" priority="3">
+It is somewhat confusing to have a field name matching the declaring class name
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\model\Contents.java">
+<violation beginline="5" endline="5" begincolumn="20" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="model" class="Contents" variable="sound_URL" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'sound_URL' is not final.
+</violation>
+<violation beginline="6" endline="6" begincolumn="20" endcolumn="28" rule="VariableNamingConventions" ruleset="Naming" package="model" class="Contents" variable="image_URL" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'image_URL' is not final.
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\model\Database.java">
+<violation beginline="14" endline="14" begincolumn="27" endcolumn="28" rule="ShortVariable" ruleset="Naming" package="model" class="Database" variable="rs" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like rs
+</violation>
+<violation beginline="60" endline="60" begincolumn="45" endcolumn="45" rule="ShortVariable" ruleset="Naming" package="model" class="Database" method="selectGameAlphabet" variable="a" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like a
+</violation>
+<violation beginline="122" endline="122" begincolumn="46" endcolumn="46" rule="ShortVariable" ruleset="Naming" package="model" class="Database" method="selectRewardImageURL" variable="p" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like p
+</violation>
+<violation beginline="144" endline="144" begincolumn="43" endcolumn="43" rule="ShortVariable" ruleset="Naming" package="model" class="Database" method="updateRewardImage" variable="p" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like p
+</violation>
+<violation beginline="156" endline="156" begincolumn="47" endcolumn="47" rule="ShortVariable" ruleset="Naming" package="model" class="Database" method="updateRewardToDefault" variable="p" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like p
+</violation>
+<violation beginline="170" endline="170" begincolumn="61" endcolumn="61" rule="ShortVariable" ruleset="Naming" package="model" class="Database" method="selectKeyboardImage" variable="c" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like c
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\model\Dictionary.java">
+<violation beginline="13" endline="13" begincolumn="33" endcolumn="33" rule="ShortVariable" ruleset="Naming" package="model" class="Dictionary" method="addWordArr" variable="w" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like w
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\model\Word.java">
+<violation beginline="6" endline="74" begincolumn="8" endcolumn="1" rule="ShortClassName" ruleset="Naming" package="model" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortClassName" priority="4">
+Avoid short class names like Word
+</violation>
+<violation beginline="13" endline="13" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Naming" package="model" class="Word" variable="db" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like db
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\view\AlphabetBoard.java">
+<violation beginline="13" endline="13" begincolumn="26" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="view" class="AlphabetBoard" variable="bg" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like bg
+</violation>
+<violation beginline="19" endline="19" begincolumn="123" endcolumn="124" rule="ShortVariable" ruleset="Naming" package="view" class="AlphabetBoard" method="AlphabetBoard" variable="dx" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dx
+</violation>
+<violation beginline="19" endline="19" begincolumn="131" endcolumn="132" rule="ShortVariable" ruleset="Naming" package="view" class="AlphabetBoard" method="AlphabetBoard" variable="dy" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dy
+</violation>
+<violation beginline="33" endline="33" begincolumn="36" endcolumn="36" rule="ShortVariable" ruleset="Naming" package="view" class="AlphabetBoard" method="loadImage" variable="i" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like i
+</violation>
+<violation beginline="39" endline="39" begincolumn="19" endcolumn="20" rule="ShortVariable" ruleset="Naming" package="view" class="AlphabetBoard" method="loadImage" variable="ii" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like ii
+</violation>
+<violation beginline="56" endline="56" begincolumn="45" endcolumn="45" rule="ShortVariable" ruleset="Naming" package="view" class="AlphabetBoard" method="paintComponent" variable="g" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like g
+</violation>
+<violation beginline="65" endline="65" begincolumn="39" endcolumn="39" rule="ShortVariable" ruleset="Naming" package="view" class="AlphabetBoard" method="drawStar" variable="g" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like g
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\view\Board.java">
+<violation beginline="39" endline="39" begincolumn="23" endcolumn="23" rule="ShortVariable" ruleset="Naming" package="view" class="Board" variable="x" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="39" endline="39" begincolumn="30" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="view" class="Board" variable="y" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like y
+</violation>
+<violation beginline="40" endline="40" begincolumn="23" endcolumn="24" rule="ShortVariable" ruleset="Naming" package="view" class="Board" variable="dx" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dx
+</violation>
+<violation beginline="40" endline="40" begincolumn="27" endcolumn="28" rule="ShortVariable" ruleset="Naming" package="view" class="Board" variable="dy" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like dy
+</violation>
+<violation beginline="43" endline="43" begincolumn="29" endcolumn="29" rule="ShortVariable" ruleset="Naming" package="view" class="Board" variable="d" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like d
+</violation>
+<violation beginline="68" endline="68" begincolumn="27" endcolumn="28" rule="ShortVariable" ruleset="Naming" package="view" class="Board" method="loadImage" variable="ii" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like ii
+</violation>
+<violation beginline="114" endline="114" begincolumn="45" endcolumn="45" rule="ShortVariable" ruleset="Naming" package="view" class="Board" method="paintComponent" variable="g" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like g
+</violation>
+<violation beginline="119" endline="119" begincolumn="38" endcolumn="38" rule="ShortVariable" ruleset="Naming" package="view" class="Board" method="drawimg" variable="g" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like g
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\view\DictionaryPanel.java">
+<violation beginline="34" endline="34" begincolumn="27" endcolumn="42" rule="VariableNamingConventions" ruleset="Naming" package="view" class="DictionaryPanel" variable="search_TextField" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'search_TextField' is not final.
+</violation>
+<violation beginline="38" endline="38" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="view" class="DictionaryPanel" variable="sp" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like sp
+</violation>
+<violation beginline="45" endline="45" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" package="view" class="DictionaryPanel" variable="d" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like d
+</violation>
+<violation beginline="84" endline="84" begincolumn="27" endcolumn="35" rule="VariableNamingConventions" ruleset="Naming" package="view" class="DictionaryPanel" method="viewSearchWord" variable="word_icon" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'word_icon' is not final.
+</violation>
+<violation beginline="124" endline="124" begincolumn="21" endcolumn="32" rule="VariableNamingConventions" ruleset="Naming" package="view" class="DictionaryPanel" method="viewDictionary" variable="animal_Count" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'animal_Count' is not final.
+</violation>
+<violation beginline="125" endline="125" begincolumn="21" endcolumn="31" rule="VariableNamingConventions" ruleset="Naming" package="view" class="DictionaryPanel" method="viewDictionary" variable="plant_Count" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'plant_Count' is not final.
+</violation>
+<violation beginline="126" endline="126" begincolumn="21" endcolumn="30" rule="VariableNamingConventions" ruleset="Naming" package="view" class="DictionaryPanel" method="viewDictionary" variable="tool_Count" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'tool_Count' is not final.
+</violation>
+<violation beginline="127" endline="127" begincolumn="21" endcolumn="32" rule="VariableNamingConventions" ruleset="Naming" package="view" class="DictionaryPanel" method="viewDictionary" variable="nation_Count" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'nation_Count' is not final.
+</violation>
+<violation beginline="194" endline="194" begincolumn="55" endcolumn="55" rule="ShortVariable" ruleset="Naming" package="view" class="DictionaryPanel" method="keyTyped" variable="e" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like e
+</violation>
+<violation beginline="197" endline="197" begincolumn="48" endcolumn="48" rule="ShortVariable" ruleset="Naming" package="view" class="DictionaryPanel" method="keyTyped" variable="a" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like a
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\view\GamePanel.java">
+<violation beginline="17" endline="17" begincolumn="26" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="view" class="GamePanel" variable="db" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like db
+</violation>
+<violation beginline="21" endline="21" begincolumn="13" endcolumn="23" rule="VariableNamingConventions" ruleset="Naming" package="view" class="GamePanel" variable="word_Length" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'word_Length' is not final.
+</violation>
+<violation beginline="22" endline="22" begincolumn="13" endcolumn="27" rule="VariableNamingConventions" ruleset="Naming" package="view" class="GamePanel" variable="alphabet_PosX" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'alphabet_PosX' is not final.
+</violation>
+<violation beginline="23" endline="23" begincolumn="13" endcolumn="27" rule="VariableNamingConventions" ruleset="Naming" package="view" class="GamePanel" variable="alphabet_PosY" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'alphabet_PosY' is not final.
+</violation>
+<violation beginline="24" endline="24" begincolumn="13" endcolumn="24" rule="VariableNamingConventions" ruleset="Naming" package="view" class="GamePanel" variable="alphabet_Now" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'alphabet_Now' is not final.
+</violation>
+<violation beginline="25" endline="25" begincolumn="13" endcolumn="26" rule="VariableNamingConventions" ruleset="Naming" package="view" class="GamePanel" variable="keyboard_Width" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'keyboard_Width' is not final.
+</violation>
+<violation beginline="26" endline="26" begincolumn="13" endcolumn="27" rule="VariableNamingConventions" ruleset="Naming" package="view" class="GamePanel" variable="keyboard_Height" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'keyboard_Height' is not final.
+</violation>
+<violation beginline="31" endline="31" begincolumn="24" endcolumn="35" rule="VariableNamingConventions" ruleset="Naming" package="view" class="GamePanel" variable="reward_Panel" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'reward_Panel' is not final.
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\view\MainFrame.java">
+<violation beginline="27" endline="27" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" variable="sp" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like sp
+</violation>
+<violation beginline="32" endline="32" begincolumn="30" endcolumn="31" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" variable="fd" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like fd
+</violation>
+<violation beginline="43" endline="43" begincolumn="27" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" variable="d" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like d
+</violation>
+<violation beginline="115" endline="115" begincolumn="41" endcolumn="41" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" method="keyPressed" variable="e" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like e
+</violation>
+<violation beginline="126" endline="126" begincolumn="44" endcolumn="44" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" method="pictureEvent" variable="e" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like e
+</violation>
+<violation beginline="151" endline="151" begincolumn="54" endcolumn="54" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" method="gameEvent" variable="e" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like e
+</violation>
+<violation beginline="157" endline="157" begincolumn="30" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" method="gameEvent" variable="c" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like c
+</violation>
+<violation beginline="205" endline="205" begincolumn="41" endcolumn="41" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" method="mainEvent" variable="e" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like e
+</violation>
+<violation beginline="226" endline="226" begincolumn="42" endcolumn="42" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" method="keyReleased" variable="e" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like e
+</violation>
+<violation beginline="232" endline="232" begincolumn="39" endcolumn="39" rule="ShortVariable" ruleset="Naming" package="view" class="MainFrame" method="keyTyped" variable="e" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like e
+</violation>
+</file>
+<file name="C:\DEV\Test_CI\src\view\PicturePanel.java">
+<violation beginline="15" endline="15" begincolumn="17" endcolumn="36" rule="AvoidFieldNameMatchingTypeName" ruleset="Naming" package="view" class="PicturePanel" variable="picturePanel" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#AvoidFieldNameMatchingTypeName" priority="3">
+It is somewhat confusing to have a field name matching the declaring class name
+</violation>
+<violation beginline="31" endline="31" begincolumn="19" endcolumn="19" rule="ShortVariable" ruleset="Naming" package="view" class="PicturePanel" variable="d" externalInfoUrl="http://pmd.sourceforge.net/pmd-5.3.1/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like d
+</violation>
+</file>
+</pmd>
