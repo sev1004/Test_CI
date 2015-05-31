@@ -170,4 +170,11 @@ public class PicturePanel {
 		urlTextField.setText(url);
 		rewardImageLabel.setIcon(rewardImage);
 	}
+	public boolean checkLoadStatus()
+	{
+		if(rewardImage.getImageLoadStatus() == java.awt.MediaTracker.ERRORED)
+			return true;
+		else
+			return false;
+	}
 }

@@ -139,12 +139,20 @@ public class MainFrame extends JFrame implements KeyListener {
 			int val = fd.showOpenDialog(null);
 			if (val == JFileChooser.APPROVE_OPTION) {
 				String fdirectory = fd.getSelectedFile().getPath();
-				mainControl.getPictureController().selectFileDirectory(fdirectory);
-				picturePanel.refreshInformation(fdirectory);
+				if(fdirectory.endsWith(".jpg")||fdirectory.endsWith(".gif")){
+					mainControl.getPictureController().selectFileDirectory(fdirectory);
+					picturePanel.refreshInformation(fdirectory);
+				}
 			}
 		} else if (e.getKeyChar() == 'd') {
-			mainControl.getPictureController().deletePicture();
-			picturePanel.refreshInformation("image/reward/default.jpg");
+			if(picturePanel.checkLoadStatus()){
+				JOptionPane.showMessageDialog(null, "has not Image!\n","이미지가 없습니다.",JOptionPane.ERROR_MESSAGE);
+			}
+			else
+			{
+				mainControl.getPictureController().deletePicture();
+				picturePanel.refreshInformation("image/reward/default.jpg");
+			}
 		}
 	}
 
