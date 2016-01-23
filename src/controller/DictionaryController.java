@@ -38,6 +38,7 @@ public class DictionaryController {
         	String userTypedWord = text;
         	this.searchbyFullWord(userTypedWord);
             //TESTESTESTSETSETSETSEETESTSETSETSETSETSETESTasdfasdfasdfasdfasdfsdaf
+            //ㅁㄴㅇㄹㄴㅇㅁㄹㅁㄴㅇㄹㅇㅁㄴㄹㅁㄴㅇㄹㅁㄴㅇㄹ
         }
     }
     public void dictionaryOpen() {
