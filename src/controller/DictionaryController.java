@@ -37,7 +37,7 @@ public class DictionaryController {
         } else if(text.length() > 1){
         	String userTypedWord = text;
         	this.searchbyFullWord(userTypedWord);
-            //TESTESTESTSETSETSETSEETESTSETSETSETSETSETEST
+            //TESTESTESTSETSETSETSEETESTSETSETSETSETSETESTasdfasdfasdfasdfasdfsdaf
         }
     }
     public void dictionaryOpen() {
