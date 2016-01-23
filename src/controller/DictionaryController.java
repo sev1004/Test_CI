@@ -1,7 +1,5 @@
 package controller;
 
-import java.util.*;
-
 import model.Database;
 import model.Dictionary;
 import model.Word;
@@ -39,6 +37,7 @@ public class DictionaryController {
         } else if(text.length() > 1){
         	String userTypedWord = text;
         	this.searchbyFullWord(userTypedWord);
+            //TESTESTESTSETSETSETSEETESTSETSETSETSETSETEST
         }
     }
     public void dictionaryOpen() {
